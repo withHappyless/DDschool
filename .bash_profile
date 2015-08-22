@@ -1,0 +1,1 @@
+export PATH=${PATH}:/Users/yosemite/Downloads/adt-bundle-mac-x86_64-20131030/sdk/platform-tools

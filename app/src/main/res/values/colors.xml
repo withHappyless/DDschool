@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <!--登录界面字体颜色-->
+    <color name="btn_login_normal">#b2b7bb</color>
+    <color name="btn_login_pressed">#35a8f8</color>
+    <color name="btn_shadow">#7F35a8f8</color>
+    <color name="btn_normal">#BF35a8f8</color>
+    <color name="btn_login_focused">#2e7cb2</color>
+    <color name="blue">#2a7ab1</color>
+    <color name="littleBlue">#5aabcc</color>
+    <color name="input_hint">#363636</color>
+    <color name="forgement_pwd">#56d292</color>
+    <color name="lineColor">#a19ea0</color>
+    <color name="error">#ef4557</color>
+    <color name="not_sex">#a19ea0</color>
+    <color name="background">#ad58ff</color>
+    <!--导航条颜色-->
+    <color name="action_toolbar_background">#4876FF</color>
+    <!--透明色-->
+    <color name="transparent">#00000000</color>
+    <!--表情点击背景-->
+    <color name="bg_gray_pressed">#e8e8e8</color>
+    <color name="bg_gray_light">#fcfcfc</color>
+    <color name="bg_gray">#f2f2f2</color>
+</resources>

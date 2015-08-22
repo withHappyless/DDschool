@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:scrollbars="none"
+        android:fillViewport="false"
+        android:id="@+id/sc_one"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:orientation="horizontal"
+            android:paddingTop="20dp"
+            android:textSize="@dimen/login_textSize"
+            android:id="@+id/rl_login">
+
+            <RelativeLayout
+                android:id="@+id/rl_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal"
+                android:textColor="@color/blue">
+
+                <TextView
+                    android:id="@+id/tv_account"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/login_option_sdn"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/login_textSize"/>
+
+                <EditText
+                    android:id="@+id/register_et_account"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tv_account"
+                    android:background="@null"
+                    android:textColor="@color/blue"
+                    android:textColorHint="@color/littleBlue"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:maxLength="12"
+                    android:hint="@string/input_sdn"
+                    android:textSize="@dimen/login_textSize"
+                    android:maxLines="1"
+                    android:layout_toStartOf="@+id/register_option_ant"
+                    android:layout_toLeftOf="@+id/register_option_ant"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/clean_of_text"
+                    android:layout_alignBottom="@+id/tv_account"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:id="@+id/register_option_ant" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/spit_view1"
+                android:layout_width="fill_parent"
+                android:layout_height="0.6dp"
+                android:layout_below="@+id/rl_account"
+                android:background="@color/lineColor">
+
+            </View>
+
+            <RelativeLayout
+                android:id="@+id/rl_psw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal"
+                android:paddingTop="20dp"
+                android:layout_below="@+id/spit_view1">
+
+                <TextView
+                    android:id="@+id/tv_pswtitle"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login_option_pwd"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/login_textSize"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <EditText
+                    android:id="@+id/register_et_pwd"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="@string/input_pwd"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:maxLength="18"
+                    android:textColor="@color/blue"
+                    android:textColorHint="@color/littleBlue"
+                    android:textSize="@dimen/login_textSize"
+                    android:maxLines="1"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/tv_pswtitle"
+                    android:layout_toLeftOf="@+id/register_option_pwd"
+                    android:layout_toStartOf="@+id/register_option_pwd" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/clean_of_text"
+                    android:layout_alignBottom="@+id/tv_pswtitle"
+                    android:layout_toLeftOf="@+id/option_pwd"
+                    android:id="@+id/register_option_pwd"
+                    android:layout_alignTop="@+id/register_et_pwd"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/spit_view2"
+                android:layout_width="fill_parent"
+                android:layout_height="0.6dp"
+                android:layout_below="@+id/rl_psw"
+                android:background="@color/lineColor">
+
+            </View>
+
+            <RelativeLayout
+                android:id="@+id/rl_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spit_view2"
+                android:paddingTop="20dp"
+                android:layout_marginBottom="12dp"
+                >
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/register_option_name"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/login_textSize" />
+
+                <EditText
+                    android:id="@+id/et_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/register_hint_name"
+                    android:textColor="@color/blue"
+                    android:textColorHint="@color/littleBlue"
+                    android:maxLength="8"
+                    android:maxLines="1"
+                    android:textSize="@dimen/login_textSize"
+                    android:layout_toRightOf="@+id/tv_name"
+                    android:background="@null"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/clean_of_text"
+                    android:layout_alignBottom="@+id/tv_name"
+                    android:id="@+id/register_option_name"
+                    android:layout_alignTop="@+id/et_name"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/spit_view3"
+                android:layout_width="fill_parent"
+                android:layout_height="0.6dp"
+                android:layout_below="@+id/rl_name"
+                android:background="@color/lineColor">
+
+            </View>
+
+            <RelativeLayout
+                android:id="@+id/rl_sex"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="15dp"
+                android:paddingTop="10dp"
+                android:layout_below="@+id/spit_view3"
+
+                >
+                <TextView
+                    android:id="@+id/tv_sex"
+                    android:layout_width="60dp"
+                    android:layout_height="26dp"
+                    android:text="@string/register_option_sex"
+                    android:textSize="@dimen/login_textSize"
+                    android:textColor="@color/blue"
+                    android:layout_alignParentBottom="true"
+                    />
+                <TextView
+                    android:id="@+id/tv_sex_man"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/register_man"
+                    android:layout_toRightOf="@+id/tv_sex"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    />
+                <TextView
+                    android:id="@+id/tv_sex_women"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/register_not_women"
+                    android:layout_toRightOf="@+id/tv_of_man"
+                    android:layout_toEndOf="@+id/tv_of_man"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true" />
+
+                <TextView
+                    android:id="@+id/tv_of_man"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="男"
+                    android:textSize="25sp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="20dp"
+                    android:textColor="@color/blue"
+                    android:paddingTop="10dp"
+                    android:layout_toRightOf="@+id/tv_sex_man" />
+
+                <TextView
+                    android:id="@+id/tv_of_woman"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="女"
+                    android:paddingRight="20dp"
+                    android:paddingLeft="10dp"
+                    android:textSize="25sp"
+                    android:gravity="bottom"
+                    android:textColor="@color/not_sex"
+                    android:paddingTop="10dp"
+                    android:layout_toRightOf="@+id/tv_sex_women" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/spit_view4"
+                android:layout_width="fill_parent"
+                android:layout_height="0.6dp"
+                android:layout_below="@+id/rl_sex"
+                android:background="@color/lineColor">
+
+            </View>
+
+            <RelativeLayout
+                android:id="@+id/rl_year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingBottom="12dp"
+                android:layout_below="@+id/spit_view4"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/tv_year"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/register_option_year"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/login_textSize"
+                    android:layout_alignParentBottom="true" />
+
+                <TextView
+                    android:id="@+id/tv_really_year"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/register_hint_year"
+                    android:textSize="@dimen/login_textSize"
+                    android:drawableRight="@drawable/change_btn"
+                    android:paddingRight="22dp"
+                    android:textColor="@color/blue"
+                    android:layout_toRightOf="@+id/tv_year"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/spit_view5"
+                android:layout_width="fill_parent"
+                android:layout_height="0.6dp"
+                android:layout_below="@+id/rl_year"
+                android:background="@color/lineColor">
+            </View>
+
+            <RelativeLayout
+                android:id="@+id/rl_dept"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingBottom="12dp"
+                android:layout_below="@+id/spit_view5"
+                >
+
+                <TextView
+                    android:id="@+id/tv_dept"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/register_option_dept"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/login_textSize"
+                    android:layout_alignParentBottom="true" />
+
+                <TextView
+                    android:id="@+id/tv_really_dept"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/register_hint_dept"
+                    android:textSize="@dimen/login_textSize"
+                    android:drawableRight="@drawable/change_btn"
+                    android:paddingRight="22dp"
+                    android:textColor="@color/blue"
+                    android:layout_toRightOf="@+id/tv_dept"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:singleLine="true"
+                    />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/spit_view6"
+                android:layout_width="fill_parent"
+                android:layout_height="0.6dp"
+                android:layout_below="@+id/rl_dept"
+                android:background="@color/lineColor">
+
+            </View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/error"
+                android:text="@string/pwd_error"
+                android:id="@+id/register_error_pwd"
+                android:layout_alignTop="@+id/spit_view2"
+                android:layout_alignLeft="@+id/register_error_text"
+                android:layout_alignStart="@+id/register_error_text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/error"
+                android:text="@string/ant_error"
+                android:id="@+id/register_error_text"
+                android:layout_marginLeft="61dp"
+                android:layout_marginStart="61dp"
+                android:layout_below="@+id/spit_view1"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <Button
+                android:id="@+id/btn_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="@string/login_title_signup"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_login_stytle"
+                android:paddingLeft="120dp"
+                android:paddingRight="120dp"
+                android:enabled="false"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/spit_view6"
+                android:layout_centerHorizontal="true"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_below="@+id/btn_register"
+                />
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>

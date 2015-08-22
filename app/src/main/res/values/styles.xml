@@ -1,0 +1,45 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <!-- toolbar (actionbar) 颜色 -->
+        <item name="colorPrimary">#4876FF</item>
+        <!-- 状态栏颜色 -->
+        <item name="colorPrimaryDark">#3A5FCD</item>
+        <!-- 窗口的背景颜色 -->
+        <item name="android:windowBackground">@android:color/white</item>
+        <!--字体颜色-->
+        <item name="android:textColorPrimary">@color/white</item>
+        <!-- SearchView -->
+        <item name="searchViewStyle">@style/Widget.AppCompat.SearchView</item>
+        <!--下拉刷新条样式-->
+        <item name="ptrHeaderStyle">@style/Widget.Custom.PtrHeader</item>
+    </style>
+
+    <style name="AppTheme" parent="AppTheme.Base">
+
+    </style>
+    
+    <style name="Widget.Custom.PtrHeader" parent="android:Widget">
+
+        <item name="ptrHeaderBackground">@color/action_toolbar_background</item>
+        <item name="ptrHeaderHeight">@dimen/abc_action_bar_default_height_material</item>
+        <item name="ptrProgressBarColor">@color/littleBlue</item>
+        <item name="ptrPullText">下拉刷新...</item>
+        <item name="ptrRefreshingText">正在载入...</item>
+
+    </style>
+
+    <style name="GridViewImages">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:numColumns">3</item>
+        <item name="android:horizontalSpacing">4dp</item>
+        <item name="android:verticalSpacing">4dp</item>
+        <item name="android:cacheColorHint">@color/transparent</item>
+        <item name="android:listSelector">@color/transparent</item>
+        <item name="android:scrollbars">none</item>
+    </style>
+
+
+</resources>

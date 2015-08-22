@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="true"
+    android:startOffset="1"
+    >
+
+    <item
+        android:drawable="@drawable/loading_primary_00_light"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/loading_primary_01_light"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/loading_primary_02_light"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/loading_primary_03_light"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/loading_primary_04_light"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/loading_primary_05_light"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/loading_primary_06_light"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/loading_primary_07_light"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/loading_primary_08_light"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/loading_primary_09_light"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/loading_primary_10_light"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/loading_primary_11_light"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/loading_primary_12_light"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/loading_primary_13_light"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/loading_primary_14_light"
+        android:duration="100"/>
+
+</animation-list>

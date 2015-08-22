@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--头像-->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <!--昵称-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <!--发表时间-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <!--性别-->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <!--等级-->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <!--帖子内容-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <!--图片内容   多图-->
+    <TableLayout
+        android:id="@+id/ll_post_images"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:rotation="3"
+        android:padding="3dp"
+        >
+
+    </TableLayout>
+
+    <!--单图-->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <!--操作栏-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

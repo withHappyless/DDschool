@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">叨叨校园</string>
+    <string name="login_title_login">登录</string>
+    <string name="login_title_signup">注册</string>
+    <string name="login_option_sdn">学号</string>
+    <string name="input_sdn">请输入学号</string>
+    <string name="ant_error">你的学号不足12位哦!</string>
+    <string name="login_option_pwd">密码</string>
+    <string name="input_pwd">请输入密码</string>
+    <string name="pwd_error">密码位数太少啦!</string>
+    <string name="forgement_pwd">忘记密码?</string>
+    <string name="register_option_name">昵称</string>
+    <string name="register_hint_name">请输入昵称</string>
+    <string name="register_option_sex">性别</string>
+    <string name="register_option_year">学年</string>
+    <string name="register_hint_year">2015年</string>
+    <string name="register_option_dept">院系</string>
+    <string name="register_hint_dept">计算机学院</string>
+    <string name="title_select_dept">选择院系</string>
+    <!--newPost相关-->
+    <string name="newPost_actionbar_send">发射</string>
+    <string name="newPost_actionbar_title">叨叨吐槽</string>
+    <string name="newPost_anyone">匿名发表</string>
+
+</resources>
