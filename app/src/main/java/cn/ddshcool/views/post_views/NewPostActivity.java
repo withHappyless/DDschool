@@ -1,7 +1,5 @@
 package cn.ddshcool.views.post_views;
 
-import android.app.Service;
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -76,8 +74,7 @@ public class NewPostActivity extends BaseActivity implements OnItemClickListener
 
     private boolean isFacing = false;   //当前是否显示表情面板
 
-    private InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-    imm.showSoftInput(view,InputMethodManager.SHOW_FORCED);
+    private InputMethodManager imm;
 
     //points
     private ArrayList<ImageView> points = new ArrayList<ImageView>();
@@ -86,6 +83,8 @@ public class NewPostActivity extends BaseActivity implements OnItemClickListener
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_post);
+
+        imm = (InputMethodManager) getSystemService(NewPostActivity.this.INPUT_METHOD_SERVICE);
 
         initView();
         setListener();
@@ -240,16 +239,12 @@ public class NewPostActivity extends BaseActivity implements OnItemClickListener
 
                     ll_emotion_dashboard.setVisibility(View.GONE);
                     isFace.setImageResource(R.drawable.ic_th_icon_face);
-                    //弹出软键盘
-                    ((InputMethodManager) NewPostActivity.this.getSystemService(Service.INPUT_METHOD_SERVICE)).
-                            hideSoftInputFromWindow(NewPostActivity.this.getCurrentFocus().getWindowToken(),
-                                    InputMethodManager.SHOW_FORCED);
+
+
                 } else {
 
                     //干掉软键盘
-                    ((InputMethodManager) NewPostActivity.this.getSystemService(Service.INPUT_METHOD_SERVICE)).
-                            hideSoftInputFromWindow(NewPostActivity.this.getCurrentFocus().getWindowToken(),
-                                    InputMethodManager.HIDE_NOT_ALWAYS);
+                    imm.hideSoftInputFromWindow(editInput.getWindowToken(), 0);
 
                     ll_emotion_dashboard.setVisibility(View.VISIBLE);
                     isFace.setImageResource(R.drawable.ic_th_input_keybord);
