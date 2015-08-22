@@ -7,13 +7,11 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AbsListView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.melnykov.fab.FloatingActionButton;
 import com.melnykov.fab.ScrollDirectionListener;
@@ -150,7 +148,6 @@ public class MainActivity extends BaseActionbarActivity {
 
 
 
-
     }
 
 
@@ -176,40 +173,41 @@ public class MainActivity extends BaseActionbarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private boolean isExit = false;
-    private Handler mHandler = new Handler();
+//    private boolean isExit = false;
+//    private Handler mHandler = new Handler();
+//
+//
+//    @Override
+//    public boolean onKeyDown(int keyCode, KeyEvent event) {
+//        //弹出左侧菜单栏
+//        if(keyCode == KeyEvent.KEYCODE_BACK){
+//
+//            //调用呼出菜单函数
+//
+//        }else if(keyCode == KeyEvent.KEYCODE_MENU){
+//            //退出程序
+//            if(!isExit){
+//
+//                isExit = true;
+//                Toast.makeText(this, "再按一次退出程序", Toast.LENGTH_SHORT).show();
+//                mHandler.postDelayed(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        isExit = false;
+//                    }
+//                },2000);
+//
+//            }else{
+//
+//                finish();
+////                ActivityCollection.finishAll();
+//                System.exit(0);
+//
+//            }
+//
+//        }
+//
+//        return true;       //有点疑问？
+//    }
 
-
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        //弹出左侧菜单栏
-        if(keyCode == KeyEvent.KEYCODE_BACK){
-
-            //调用呼出菜单函数
-
-        }else if(keyCode == KeyEvent.KEYCODE_MENU){
-            //退出程序
-            if(!isExit){
-
-                isExit = true;
-                Toast.makeText(this, "再按一次退出程序", Toast.LENGTH_SHORT).show();
-                mHandler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        isExit = false;
-                    }
-                },2000);
-
-            }else{
-
-                finish();
-//                ActivityCollection.finishAll();
-                System.exit(0);
-
-            }
-
-        }
-
-        return false;       //有点疑问？
-    }
 }

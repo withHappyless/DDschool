@@ -17,16 +17,9 @@ public class PostsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        //加载布局
-        View view = new View(getActivity());
-
-        return view;
-
-
-
-
-
+        return container;
 
 
     }
+
 }
