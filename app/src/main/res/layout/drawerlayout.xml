@@ -8,21 +8,9 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        xmlns:fab="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical"
         >
-        <uk.co.senab.actionbarpulltorefresh.library.PullToRefreshLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            android:id="@+id/ptr_main_activity_refresh"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
-            <ListView
-                android:id="@+id/listview1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-            </ListView>
 
             <!--<com.example.toolbar.widget.PagerSlidingTabStrip-->
                 <!--android:id="@+id/tabs"-->
@@ -36,19 +24,8 @@
                 <!--android:layout_height="match_parent" >-->
             <!--</android.support.v4.view.ViewPager>-->
 
-        </uk.co.senab.actionbarpulltorefresh.library.PullToRefreshLayout>
-        <com.melnykov.fab.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|right"
-            android:layout_marginBottom="32dp"
-            android:layout_marginRight="20dp"
-            android:src="@drawable/ic_add_white_24dp"
-            fab:fab_colorNormal="@color/btn_normal"
-            fab:fab_shadow="false"
-            fab:fab_colorPressed="@color/blue"
-            fab:fab_colorRipple="@color/littleBlue"/>
+
+
     </FrameLayout>
     <!--侧滑菜单-->
     <LinearLayout

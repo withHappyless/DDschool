@@ -1,56 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <!--头像-->
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <!--昵称-->
+
+    <include layout="@layout/include_avatar"/>
+
+    <!--文本区域-->
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <!--发表时间-->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <!--性别-->
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <!--等级-->
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <!--帖子内容-->
-    <TextView
+        android:id="@+id/tv_content"
+        style="@style/TextViewBody"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-    <!--图片内容   多图-->
-    <TableLayout
-        android:id="@+id/ll_post_images"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:rotation="3"
-        android:padding="3dp"
-        >
+        android:text="我就是我,不一样的二货!"
+        android:layout_marginTop="-16dp"
+        android:padding="16dp" />
 
-    </TableLayout>
-
-    <!--单图-->
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
+    <!--图片展示-->
+    <include
+        android:id="@+id/include_retweeted_status"
+        layout="@layout/include_status_image"
+        android:visibility="gone" />
 
     <!--操作栏-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/btn_login_normal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_share_bottom"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_tran2gray_sel"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_share_bottom"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_th_forwarding"
+                    />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/btn_login_normal" />
+
+            <LinearLayout
+                android:id="@+id/ll_comment_bottom"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_tran2gray_sel"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_comment_bottom"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_card_comment" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/btn_login_normal" />
+
+            <LinearLayout
+                android:id="@+id/ll_like_bottom"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_tran2gray_sel"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/iv_like_bottom"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_card_like" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/btn_login_normal" />
 
     </LinearLayout>
 
-
-
-</RelativeLayout>
+</LinearLayout>

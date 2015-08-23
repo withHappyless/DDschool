@@ -67,6 +67,8 @@ public class MainActivity extends BaseActionbarActivity {
                 })
                 .setup(myRefershLayout);
 
+
+
         //设置toolbar相关属性
         mToolbar.setTitle("叨叨校园");
         setSupportActionBar(mToolbar);
