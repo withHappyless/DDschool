@@ -41,5 +41,25 @@
         <item name="android:scrollbars">none</item>
     </style>
 
+    <style name="TextViewBody">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextViewSubhead">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/txt_black</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextViewCaption">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/txt_light_gray</item>
+        <item name="android:textSize">12sp</item>
+    </style>
 
 </resources>
