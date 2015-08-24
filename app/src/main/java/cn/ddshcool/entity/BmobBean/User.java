@@ -7,7 +7,7 @@ import cn.bmob.im.bean.BmobChatUser;
  */
 public class User extends BmobChatUser {
 
-    private Boolean userSex;
+    private Boolean userSex;       //true是女
     private Integer userExperience;
     private String userSchool;
     private String userDept;

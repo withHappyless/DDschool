@@ -15,6 +15,9 @@ import cn.ddshcool.services.adapters.ImageOptHelper;
  */
 public class MyApplication extends Application{
     private static Context mContext;
+    public static int post_thumbnail_modelID = 1;
+    public static String AccessKey = "fef8c139e28d71bb4b575acea9efe6f0";
+
     @Override
     public void onCreate() {
         super.onCreate();

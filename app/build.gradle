@@ -11,6 +11,12 @@ android {
         versionCode 1
         versionName "1.0"
     }
+    //这里有点问题啊 哥们
+    packagingOptions{
+
+        exclude 'AndroidManifest.xml'       //忽略这个文件？！
+
+    }
     buildTypes {
         release {
             minifyEnabled false
@@ -42,8 +48,10 @@ dependencies {
     compile files('libs/universal-image-loader-1.9.4.jar')
     compile files('libs/BmobIM_V1.1.8beta_20150408.jar')
     compile files('libs/locSDK_4.2.jar')
-    compile files('libs/photoview-library-1.2.2.jar')
+
     compile files('libs/BmobSDK_V3.4.3_0820.jar')
     compile files('libs/okhttp-2.4.0.jar')
     compile files('libs/okio-1.4.0.jar')
+    compile project(':lib:pull')
+
 }

@@ -29,7 +29,7 @@ import java.util.List;
 import cn.bmob.v3.BmobUser;
 import cn.ddshcool.entity.BaseActivity;
 import cn.ddshcool.entity.BmobBean.User;
-import cn.ddshcool.entity.BmobBean.post_list;
+import cn.ddshcool.entity.BmobBean.Post;
 import cn.ddshcool.main.R;
 import cn.ddshcool.services.adapters.EmotionGvAdapter;
 import cn.ddshcool.services.adapters.EmotionPagerAdapter;
@@ -44,7 +44,12 @@ import cn.ddshcool.views.weight.WrapHeightGridView;
 import cn.pedant.SweetAlert.SweetAlertDialog;
 
 /**
- * Created by yosemite on 15/8/15.
+ * 也许内存溢出的问题 可以用缩略图来解决？
+ * 没有判断网络状态
+ * 帖子上传断网问题判断 (接收广播解决?)
+ * gridView 高度自适应问题
+ * 帖子发表方式改进 ？！！
+ * 以及输入法弹出 显示 问题 (表情栏弹出时)
  */
 public class NewPostActivity extends BaseActivity implements OnItemClickListener {
 
@@ -294,7 +299,7 @@ public class NewPostActivity extends BaseActivity implements OnItemClickListener
                     }
                     //获取当前用户
                     User user = BmobUser.getCurrentUser(NewPostActivity.this,User.class);
-                    post_list postlist = new post_list();
+                    Post postlist = new Post();
                     postlist.setcontent(postText);
                     //添加发帖人
                     postlist.setAuthor(user);

@@ -1,30 +1,19 @@
 package cn.ddshcool.views;
 
-import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-import android.os.Handler;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.AbsListView;
-import android.widget.ListView;
-
-import com.melnykov.fab.FloatingActionButton;
-import com.melnykov.fab.ScrollDirectionListener;
 
 import cn.ddshcool.entity.BaseActionbarActivity;
-import cn.ddshcool.entity.DeptAndYear;
 import cn.ddshcool.main.R;
-import cn.ddshcool.services.adapters.DeptAndYearAdapter;
-import cn.ddshcool.views.post_views.NewPostActivity;
-import uk.co.senab.actionbarpulltorefresh.library.ActionBarPullToRefresh;
-import uk.co.senab.actionbarpulltorefresh.library.Options;
-import uk.co.senab.actionbarpulltorefresh.library.PullToRefreshLayout;
-import uk.co.senab.actionbarpulltorefresh.library.listeners.OnRefreshListener;
+import cn.ddshcool.views.post_views.PostsFragment;
 
 
 /**
@@ -36,38 +25,23 @@ public class MainActivity extends BaseActionbarActivity {
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mDrawerToggle;
 
-    //下拉刷新菜单
-    private PullToRefreshLayout myRefershLayout;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        Fragment fragment = new PostsFragment();
+        fragmentTransaction.replace(R.id.fl_main,fragment);
+
+        fragmentTransaction.commit();
+
+
         initView();     //初始化控件
-
-        ActionBarPullToRefresh.from(this)
-                .options(Options.create()
-                                .scrollDistance(.65f)
-                                .build()
-                        )
-                .allChildrenArePullable()
-                .listener(new OnRefreshListener() {
-                    @Override
-                    public void onRefreshStarted(View view) {
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                myRefershLayout.setRefreshComplete();
-                            }
-                        }, 3000);
-                    }
-
-                })
-                .setup(myRefershLayout);
-
-
 
         //设置toolbar相关属性
         mToolbar.setTitle("叨叨校园");
@@ -78,49 +52,6 @@ public class MainActivity extends BaseActionbarActivity {
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, mToolbar, R.string.register_option_year, R.string.register_option_dept);
         mDrawerToggle.syncState();
         mDrawerLayout.setDrawerListener(mDrawerToggle);
-
-
-        //夜间模式
-
-        ListView listView = (ListView) findViewById(R.id.listview1);
-        DeptAndYearAdapter adapter = new DeptAndYearAdapter(this,R.layout.item_dept_year, DeptAndYear.itemOfDept);
-        listView.setAdapter(adapter);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setBackgroundResource(R.drawable.action_btn_normal);
-        fab.attachToListView(listView, new ScrollDirectionListener() {
-            @Override
-            public void onScrollDown() {
-                Log.d("ListViewFragment", "onScrollDown()");
-            }
-
-            @Override
-            public void onScrollUp() {
-                Log.d("ListViewFragment", "onScrollUp()");
-            }
-        }, new AbsListView.OnScrollListener() {
-            @Override
-            public void onScrollStateChanged(AbsListView view, int scrollState) {
-                Log.d("ListViewFragment", "onScrollStateChanged()");
-            }
-
-            @Override
-            public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
-                Log.d("ListViewFragment", "onScroll()");
-            }
-        });
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent intent = new Intent(MainActivity.this, NewPostActivity.class);
-                startActivity(intent);
-
-            }
-        });
-
-
-
 
 
 //        mToolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
@@ -145,8 +76,7 @@ public class MainActivity extends BaseActionbarActivity {
     public void initView(){
         mToolbar = (Toolbar) findViewById(R.id.tb_main_toolbar);
         //下拉刷新控件
-        myRefershLayout = (PullToRefreshLayout) findViewById(R.id.ptr_main_activity_refresh);
-
+//        myRefershLayout = (PullToRefreshLayout) findViewById(R.id.ptr_main_activity_refresh);
 
 
 
