@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:padding="16dp" >
 
-    <com.boredream.boreweibo.widget.WrapHeightGridView
+    <cn.ddshcool.views.weight.WrapHeightGridView
         android:id="@+id/gv_images"
         style="@style/GridViewImages"
         android:layout_width="272dp" />

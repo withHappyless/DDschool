@@ -43,7 +43,7 @@ public class PostsFragment extends Fragment {
 
     private PostsAdapter postsAdapter;
     private List<Post> postList = new ArrayList<Post>();
-
+    private BmobQuery<Post> queryPost = new BmobQuery<Post>();
 
     private int curPage = 1;    //当前页数
     private int pagePostCount = 10; //每页帖子个数
@@ -57,6 +57,7 @@ public class PostsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         isFirst=true;
+        queryPost.setLimit(pagePostCount); // 限制每页多少数据
         initView();
         loadData(1);    //载入数据
 
@@ -126,14 +127,14 @@ public class PostsFragment extends Fragment {
 //            //先从网络获取 失败后 从缓存中获取
 //            queryPost.setCachePolicy(BmobQuery.CachePolicy.NETWORK_ELSE_CACHE);
 //        }
-        BmobQuery<Post> queryPost = new BmobQuery<Post>();
-        queryPost.setLimit(pagePostCount); // 限制每页多少数据
+
+
         queryPost.setCachePolicy(BmobQuery.CachePolicy.NETWORK_ONLY);
         //没有调用刷新动画
         queryPost.include("author");    //同时查询发帖人信息
         queryPost.order("createdAt");   //按照发帖时间排序
         myRefershLayout.setRefreshing(true);
-        queryPost.setSkip(page * pagePostCount);  //取出当前页数中数据
+        queryPost.setSkip(page-1 * 10);  //取出当前页数中数据
         queryPost.findObjects(getActivity(), new FindListener<Post>() {
             @Override
             public void onSuccess(List<Post> list) {
