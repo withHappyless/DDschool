@@ -13,6 +13,7 @@ public class User extends BmobChatUser {
     private String userDept;
     private String userSpeak;
     private String whatTime;
+    private Integer likeCount;
 
     public String getWhatTime() {
         return whatTime;
@@ -62,4 +63,11 @@ public class User extends BmobChatUser {
         this.userSpeak = userSpeak;
     }
 
+    public Integer getLikeCount() {
+        return likeCount;
+    }
+
+    public void setLikeCount(Integer likeCount) {
+        this.likeCount = likeCount;
+    }
 }

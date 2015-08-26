@@ -40,7 +40,6 @@ public class MainActivity extends BaseActionbarActivity {
 
         fragmentTransaction.commit();
 
-
         initView();     //初始化控件
 
         //设置toolbar相关属性

@@ -5,9 +5,10 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.FrameLayout;
 import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.RelativeLayout.LayoutParams;
+import android.widget.RelativeLayout;
 
 import com.nostra13.universalimageloader.core.ImageLoader;
 
@@ -27,6 +28,7 @@ public class StatusGridImgsAdapter extends BaseAdapter {
 		this.thumbnail_images = thumbnail_images;
 		imageLoader = ImageLoader.getInstance();
 	}
+
 
 	@Override
 	public int getCount() {
@@ -57,12 +59,22 @@ public class StatusGridImgsAdapter extends BaseAdapter {
 		}
 		
 		GridView gv = (GridView) parent;
+
 		int horizontalSpacing = gv.getHorizontalSpacing();
+
 		int numColumns = gv.getNumColumns();
+
 		int itemWidth = (gv.getWidth() - (numColumns-1) * horizontalSpacing
 				- gv.getPaddingLeft() - gv.getPaddingRight()) / numColumns;
 
-		LayoutParams params = new LayoutParams(itemWidth, itemWidth);
+		if(thumbnail_images.size() == 4 ){
+			gv.setNumColumns(2);
+			int newitemWidth = itemWidth*2 + horizontalSpacing +gv.getPaddingLeft() + gv.getPaddingRight();
+			gv.setLayoutParams(new FrameLayout.LayoutParams(newitemWidth, newitemWidth));
+
+		}
+
+		RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(itemWidth, itemWidth);
 		holder.iv_image.setLayoutParams(params);
 
 		imageLoader.displayImage(getItem(position), holder.iv_image);

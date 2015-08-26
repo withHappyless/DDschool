@@ -19,6 +19,6 @@
         android:layout_alignParentRight="true"
         android:padding="1dp"
         android:src="@drawable/image_delete"
-        android:visibility="visible" />
+        android:visibility="gone" />
 
 </RelativeLayout>

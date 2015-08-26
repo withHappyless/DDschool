@@ -10,18 +10,42 @@
         android:layout_height="40dp"
         android:layout_gravity="center_vertical"
         android:layout_marginLeft="16dp"
-        android:scaleType="centerCrop" />
+        android:scaleType="centerInside" />
 
     <RelativeLayout
         android:id="@+id/rl_content"
         android:layout_width="wrap_content"
         android:layout_height="72dp"
         android:padding="16dp" >
-        <!--昵称-->
-        <TextView
-            android:id="@+id/tv_subhead"
-            style="@style/TextViewSubhead"
-            android:text="hi,I'm LiHua" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <!--昵称-->
+            <TextView
+                android:id="@+id/tv_subhead"
+                style="@style/TextViewSubhead"
+                android:text="hi,I'm LiHua" />
+            <ImageView
+                android:id="@+id/iv_avatar_sex"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_th_sex_boy"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@+id/tv_subhead"
+                />
+            <ImageView
+                android:id="@+id/iv_avatar_level"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_marginLeft="4dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_rating_lv_1"
+                android:layout_toRightOf="@+id/iv_avatar_sex"
+                />
+        </LinearLayout>
         <!--发布时间-->
         <TextView
             android:id="@+id/tv_caption"
@@ -29,22 +53,7 @@
             android:layout_alignParentBottom="true"
             android:text="我就是帅"
             android:textColor="@color/btn_login_normal" />
-        <ImageView
-            android:id="@+id/iv_avatar_sex"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_th_sex_boy"
-            android:layout_marginLeft="8dp"
-            android:layout_toRightOf="@+id/tv_subhead"
-            />
-        <ImageView
-            android:id="@+id/iv_avatar_level"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:src="@drawable/ic_rating_lv_1"
-            android:layout_toRightOf="@+id/iv_avatar_sex"
-            />
+
     </RelativeLayout>
 
     <LinearLayout

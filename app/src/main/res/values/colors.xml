@@ -29,4 +29,5 @@
     <color name="txt_gray">#565656</color>
     <color name="txt_light_gray">#898989</color>
 
+    <color name="listView_divider">#e8eff6</color>
 </resources>

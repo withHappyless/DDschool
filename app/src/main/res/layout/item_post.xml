@@ -12,6 +12,7 @@
         android:id="@+id/tv_content"
         style="@style/TextViewBody"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="我就是我,不一样的二货!"
         android:layout_marginTop="-16dp"
         android:padding="16dp" />
@@ -37,7 +38,7 @@
         <LinearLayout
 
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="36dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -52,8 +53,8 @@
 
                 <ImageView
                     android:id="@+id/iv_share_bottom"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
                     android:src="@drawable/ic_th_forwarding"
                     />
                 <TextView
@@ -81,8 +82,8 @@
 
                 <ImageView
                     android:id="@+id/iv_comment_bottom"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
                     android:src="@drawable/ic_card_comment" />
 
                 <TextView
@@ -110,8 +111,8 @@
 
                 <ImageView
                     android:id="@+id/iv_like_bottom"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
                     android:src="@drawable/ic_card_like" />
 
                 <TextView
@@ -119,7 +120,6 @@
                     style="@style/TextViewBody"
                     android:layout_marginLeft="8dp"
                     android:text="点赞"
-                    android:textStyle="bold"
                     android:textColor="@color/littleBlue" />
 
             </LinearLayout>

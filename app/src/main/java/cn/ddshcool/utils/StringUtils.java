@@ -43,7 +43,7 @@ public class StringUtils {
 				
 				if(bitmap != null) {
 					int size = (int) tv.getTextSize();
-					bitmap = Bitmap.createScaledBitmap(bitmap, size, size, true);
+					bitmap = Bitmap.createScaledBitmap(bitmap, size + 10, size + 10, true);
 					
 					ImageSpan imageSpan = new ImageSpan(context, bitmap);
 					spannableString.setSpan(imageSpan, start, start + emojiStr.length(), 
@@ -82,7 +82,7 @@ public class StringUtils {
 
 				if(bitmap != null) {
 					int size = (int) tv.getTextSize();
-					bitmap = Bitmap.createScaledBitmap(bitmap, size, size, true);
+					bitmap = Bitmap.createScaledBitmap(bitmap, size + 5, size + 5, true);
 
 					ImageSpan imageSpan = new ImageSpan(context, bitmap);
 					spannableString.setSpan(imageSpan, start, start + emojiStr.length(),

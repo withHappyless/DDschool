@@ -4,24 +4,31 @@
     xmlns:fab="http://schemas.android.com/apk/res-auto"
     android:id="@+id/ptr_post_refresh"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
 
-    <com.handmark.pulltorefresh.library.PullToRefreshListView
-        android:id="@+id/lv_post_list"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
 
-    <com.melnykov.fab.FloatingActionButton
-        android:id="@+id/fab_add_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|right"
-        android:layout_marginBottom="32dp"
-        android:layout_marginRight="20dp"
-        android:src="@drawable/ic_add_white_24dp"
-        fab:fab_colorNormal="@color/btn_normal"
-        fab:fab_colorPressed="@color/blue"
-        fab:fab_colorRipple="@color/littleBlue"
-        fab:fab_shadow="false" />
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/lv_post_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:divider="@color/listView_divider"
+            android:dividerHeight="8dp"
+            />
+
+        <com.melnykov.fab.FloatingActionButton
+            android:id="@+id/fab_add_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="28dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/ic_add_white_24dp"
+
+            fab:fab_colorNormal="@color/btn_normal"
+            fab:fab_colorPressed="@color/blue"
+            fab:fab_colorRipple="@color/littleBlue"
+            fab:fab_shadow="false" />
 
 </uk.co.senab.actionbarpulltorefresh.library.PullToRefreshLayout>

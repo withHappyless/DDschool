@@ -34,7 +34,7 @@ import cn.ddshcool.main.R;
 import cn.ddshcool.services.adapters.EmotionGvAdapter;
 import cn.ddshcool.services.adapters.EmotionPagerAdapter;
 import cn.ddshcool.services.adapters.WriteStatusGridImgsAdapter;
-import cn.ddshcool.services.network_service.PostService;
+import cn.ddshcool.services.network_service.NewPostService;
 import cn.ddshcool.utils.DisplayUtil;
 import cn.ddshcool.utils.EmotionUtils;
 import cn.ddshcool.utils.ImageUtils;
@@ -306,7 +306,7 @@ public class NewPostActivity extends BaseActivity implements OnItemClickListener
                     //是否匿名发表
                     postlist.setIsVisible(isVisible.isCheck());
 
-                    PostService.whatSend(NewPostActivity.this , imgUris , postlist);
+                    NewPostService.whatSend(NewPostActivity.this, imgUris, postlist);
 
                 }else{
                     //如果没内容就进行提示

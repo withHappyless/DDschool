@@ -2,13 +2,11 @@ package cn.ddshcool.views.weight;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.widget.ListView;
 
-public class WrapHeightListView extends ListView {
+import com.handmark.pulltorefresh.library.PullToRefreshListView;
 
-	public WrapHeightListView(Context context, AttributeSet attrs, int defStyle) {
-		super(context, attrs, defStyle);
-	}
+public class WrapHeightListView extends PullToRefreshListView {
+
 
 	public WrapHeightListView(Context context, AttributeSet attrs) {
 		super(context, attrs);
