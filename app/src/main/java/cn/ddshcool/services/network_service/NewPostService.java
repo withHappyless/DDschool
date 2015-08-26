@@ -22,7 +22,7 @@ import cn.pedant.SweetAlert.SweetAlertDialog;
 /**
  * Created by yosemite on 15/8/22.
  */
-public class PostService {
+public class NewPostService {
 
     private static ArrayList<Uri> myImgUris = new ArrayList<Uri>();
     private static Post myPostlist = new Post();
@@ -43,9 +43,9 @@ public class PostService {
 
         //判断是否是图片帖子
         if (!imgUris.isEmpty()) {
-            PostService.sendPost(newPostActivity, postlist, imgUris, sendDialog);
+            NewPostService.sendPost(newPostActivity, postlist, imgUris, sendDialog);
         } else {
-            PostService.sendPost(newPostActivity, postlist, sendDialog);
+            NewPostService.sendPost(newPostActivity, postlist, sendDialog);
         }
     }
 
@@ -56,12 +56,12 @@ public class PostService {
         postlist.save(newPostActivity, new SaveListener() {
             @Override
             public void onSuccess() {
-                PostService.showDalog(newPostActivity, dialog, true);
+                NewPostService.showDalog(newPostActivity, dialog, true);
             }
 
             @Override
             public void onFailure(int i, String s) {
-                PostService.showDalog(newPostActivity, dialog, false);
+                NewPostService.showDalog(newPostActivity, dialog, false);
             }
         });
     }
@@ -106,10 +106,11 @@ public class PostService {
                     @Override
                     public void onSuccess(String thumbnailName, String thumbnailUrl) {
                         //此处得到的缩略图地址（thumbnailUrl）不一定能够请求的到，此方法为异步方法
-                        Log.i("bmob", "onSuccess :" + thumbnailName + "-->" + thumbnailUrl);
+                        Log.e("bmob", "onSuccess :" + thumbnailName + "-->" + thumbnailUrl);
                         //生成URL签名
                         String URL = BmobProFile.getInstance(newPostActivity).signURL(thumbnailName
                                 , thumbnailUrl, MyApplication.AccessKey, 0, null);
+                        Log.e("picUrl", URL );
                         //存入缩略图集合
                         thumbnail_image_list.add(URL);
                         //如果缩略图全部弄完
@@ -119,12 +120,12 @@ public class PostService {
                             postlist.save(newPostActivity, new SaveListener() {
                                 @Override
                                 public void onSuccess() {
-                                    PostService.showDalog(newPostActivity, dialog, true);
+                                    NewPostService.showDalog(newPostActivity, dialog, true);
                                 }
 
                                 @Override
                                 public void onFailure(int i, String s) {
-                                    PostService.showDalog(newPostActivity, dialog, false);
+                                    NewPostService.showDalog(newPostActivity, dialog, false);
                                 }
                             });
                         }
@@ -135,7 +136,7 @@ public class PostService {
                         Log.e("error——newPOST/123",errormsg);
                         Log.e("error——newPOST/456",statuscode+"");
                         //结束本次发表
-                        PostService.showDalog(newPostActivity, dialog, false);
+                        NewPostService.showDalog(newPostActivity, dialog, false);
                     }
                 });
 
@@ -148,7 +149,7 @@ public class PostService {
 
             @Override
             public void onError(int i, String s) {
-                PostService.showDalog(newPostActivity, dialog, false);
+                NewPostService.showDalog(newPostActivity, dialog, false);
             }
         });
 
@@ -184,7 +185,7 @@ public class PostService {
                 @Override
                 public void onClick(SweetAlertDialog sweetAlertDialog) {
 
-                    PostService.whatSend(newPostActivity, myImgUris, myPostlist);
+                    NewPostService.whatSend(newPostActivity, myImgUris, myPostlist);
 
                 }
             });
