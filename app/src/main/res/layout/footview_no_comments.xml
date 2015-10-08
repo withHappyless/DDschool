@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_comment_no_comments"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible">
+    <!-- TODO 缺少一个显示加载中的进度条 用个什么 样式的进度条呢 暂时先用这个弱智进度条吧-->
+    <ImageView
+        android:id="@+id/iv_comment_is_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:src="@anim/anim_progress_more_morning"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <ImageView
+        android:id="@+id/iv_comment_no_comments"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_treehole_no_comments"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_comment_no_comments"
+        android:layout_centerHorizontal="true"
+        android:padding="8dp"
+        android:text="还没有评论,你来试试?"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:visibility="gone"
+        />
+</RelativeLayout>

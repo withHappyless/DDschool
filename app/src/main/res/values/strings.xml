@@ -22,4 +22,8 @@
     <string name="newPost_actionbar_title">叨叨吐槽</string>
     <string name="newPost_anyone">匿名发表</string>
 
+    <!--comment 相关-->
+    <string name="comment_edittext_hint">点击输入你的评论...</string>
+    <string name="comment_send">发送</string>
+
 </resources>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?><!--下拉刷新布局-->
+
+    <uk.co.senab.actionbarpulltorefresh.library.PullToRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/ptr_comment_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+            <!--导航条navigationBar-->
+            <include
+                android:id="@+id/bar"
+                layout="@layout/include_titlebar" />
+
+            //展示回复界面 使用hearView 的方式 加载帖子布局
+
+            <ListView
+                android:id="@+id/lv_comment_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/input"
+                android:layout_below="@+id/bar"
+                android:divider="@color/listView_divider" />
+
+            <!--</FrameLayout>-->
+
+            <include
+                android:id="@+id/input"
+                layout="@layout/include_comment_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_comment_emotion_dashboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingBottom="2dp"
+            android:visibility="gone">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_comment_emotion_dashboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v4.view.ViewPager>
+
+            <!--小圆角图标-->
+            <LinearLayout
+                android:id="@+id/ll_comment_points"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal" />
+
+        </LinearLayout>
+    </uk.co.senab.actionbarpulltorefresh.library.PullToRefreshLayout>

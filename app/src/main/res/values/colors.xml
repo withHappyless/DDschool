@@ -30,4 +30,9 @@
     <color name="txt_light_gray">#898989</color>
 
     <color name="listView_divider">#e8eff6</color>
+
+    <!--comment-->
+    <color name="comment_input_text_color"></color>
+    <color name="comment_anyone_selected"></color>
+    <color name="comment_anyone_text_color"></color>
 </resources>
