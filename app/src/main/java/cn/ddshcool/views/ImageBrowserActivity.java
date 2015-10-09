@@ -73,7 +73,7 @@ public class ImageBrowserActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 Bitmap bitmap = adapter.getBitmap(mViewPager.getCurrentItem());
-                //TODO 这里有问题啊 ！！ ！ 我到底需不需要建一个图片管理类呢
+                //TODO 这里有问题啊 ！！ ！ 我到底需不需要建一个图片管理类呢 来先加载缓存图片
 //                boolean showOriImag = picUrl.isShowOriImag();
                 boolean showOriImag = false;
 

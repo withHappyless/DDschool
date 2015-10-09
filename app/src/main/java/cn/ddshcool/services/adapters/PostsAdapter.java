@@ -77,6 +77,8 @@ public class PostsAdapter extends BaseAdapter {
                     .findViewById(R.id.ll_card_content);
             holder.iv_avatar = (ImageView) convertView
                     .findViewById(R.id.iv_avatar);
+            holder.iv_avatar_sex = (ImageView) convertView
+                    .findViewById(R.id.iv_avatar_sex);
             holder.rl_content = (RelativeLayout) convertView
                     .findViewById(R.id.rl_content);
             holder.tv_subhead = (TextView) convertView
@@ -146,7 +148,9 @@ public class PostsAdapter extends BaseAdapter {
         holder.tv_caption.setText(TimeUtil.getDescriptionTimeFromTimestamp(
                 TimeUtil.stringToLong(post.getCreatedAt(), "yyyy-MM-dd HH:mm")));
         //加载性别
-        if (user.getUserSex() != null && user.getUserSex()) {        //false是男
+
+        if (user.getUserSex() != null || user.getUserSex()) {        //false是男
+
             holder.iv_avatar_sex.setImageResource(R.drawable.ic_th_sex_girl);
         }
         //加载等级(预留)

@@ -1,5 +1,24 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
+    <style name="Theme.Swipe.Back" parent="AppTheme.Base">
+
+        <item name="android:windowAnimationStyle">@style/ActivitySwipeBack</item>
+        <item name="android:windowIsTranslucent">true</item>
+
+    </style>
+
+    <style name="ActivitySwipeBack" parent="@android:style/Animation.Activity">
+        <!--从 A1 启动 A2 时，A1 从屏幕上消失-->
+        <item name="android:activityOpenEnterAnimation">@anim/in_from_right</item>
+        <!--从 A1 启动 A2 时，A2 出现在屏幕上-->
+        <item name="android:activityOpenExitAnimation">@anim/out_from_left</item>
+        <!--从 A2 退出回到 A1 时，A2 从屏幕上消失-->
+        <item name="android:activityCloseEnterAnimation">@anim/in_from_left</item>
+        <!--从 A2 退出回到 A1 时，A1 出现在屏幕上-->
+        <item name="android:activityCloseExitAnimation">@anim/out_from_right</item>
+
+    </style>
+
     <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
 
         <!-- toolbar (actionbar) 颜色 -->

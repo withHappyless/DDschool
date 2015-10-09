@@ -255,7 +255,7 @@ public class commentActivity extends BaseBackActivity implements AdapterView.OnI
                     sendIsOk = false;
 
                 } else if (!sendIsOk) {     //牺牲空间与判断 节省UI更新成本
-                    mSendComment.setTextColor(getResources().getColor(R.color.comment_send_normal));
+                    mSendComment.setTextColor(getResources().getColor(R.color.comment_send_disable));
                     mSendComment.setEnabled(true);
                     sendIsOk = true;
                 }

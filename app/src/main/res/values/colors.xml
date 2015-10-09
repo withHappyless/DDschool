@@ -32,7 +32,12 @@
     <color name="listView_divider">#e8eff6</color>
 
     <!--comment-->
-    <color name="comment_input_text_color"></color>
-    <color name="comment_anyone_selected"></color>
-    <color name="comment_anyone_text_color"></color>
+    <color name="comment_input_text_color">#000000</color>
+    <color name="comment_anyone_selected">#4876ff</color>
+    <color name="comment_anyone_text_color">#232323</color>
+    <color name="comment_text_size_normal">#232323</color>
+    <color name="comment_text_size_warring">#ef4565</color>
+    <color name="comment_send_enable">#5aabcc</color>
+    <color name="comment_send_disable">#565656</color>
+
 </resources>
