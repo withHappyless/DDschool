@@ -34,7 +34,10 @@
         </activity>
         <activity android:name="cn.ddshcool.views.MainActivity">
         </activity>
-        <activity android:name="cn.ddshcool.views.post_views.NewPostActivity"></activity>
+        <activity android:name="cn.ddshcool.views.post_views.NewPostActivity"
+            android:theme="@style/Theme.Swipe.Back"
+            android:windowSoftInputMode="stateHidden"
+            ></activity>
         <!-- IM聊天所需的Push start-->
         <service
             android:name="cn.bmob.push.lib.service.PushService"

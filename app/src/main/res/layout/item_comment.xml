@@ -22,19 +22,14 @@
             android:layout_marginRight="16dp"
             android:padding="16dp"
             />
-        <TextView
-            android:id="@+id/tv_comment_recontent"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="72dp"
-            android:background="@drawable/shape_recomment"
-            android:padding="8dp"
-            android:layout_marginTop="-8dp"
-            android:text="回复@某同学的评论:"
-            android:textStyle="bold"
-            android:layout_below="@+id/tv_comment_content"
-            android:layout_marginRight="16dp"
-            android:visibility="visible" />
+        <View
+            android:layout_width="320dp"
+            android:layout_height="0.8dp"
+            android:layout_centerHorizontal="true"
+            android:background="@color/not_sex"
+            android:layout_alignBottom="@+id/tv_comment_content"
+            />
+
     </RelativeLayout>
 
 </LinearLayout>

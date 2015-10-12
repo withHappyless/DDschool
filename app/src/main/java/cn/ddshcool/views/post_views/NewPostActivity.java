@@ -27,9 +27,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cn.bmob.v3.BmobUser;
-import cn.ddshcool.entity.BaseActivity;
-import cn.ddshcool.entity.BmobBean.User;
+import cn.ddshcool.entity.BaseBackActivity;
 import cn.ddshcool.entity.BmobBean.Post;
+import cn.ddshcool.entity.BmobBean.User;
 import cn.ddshcool.main.R;
 import cn.ddshcool.services.adapters.EmotionGvAdapter;
 import cn.ddshcool.services.adapters.EmotionPagerAdapter;
@@ -51,7 +51,7 @@ import cn.pedant.SweetAlert.SweetAlertDialog;
  * 帖子发表方式改进 ？！！
  * 以及输入法弹出 显示 问题 (表情栏弹出时)
  */
-public class NewPostActivity extends BaseActivity implements OnItemClickListener {
+public class NewPostActivity extends BaseBackActivity implements OnItemClickListener {
 
     private LinearLayout mLinearLayout;
     private CheckBox isVisible;
@@ -130,8 +130,6 @@ public class NewPostActivity extends BaseActivity implements OnItemClickListener
 //        layoutParams.width=size;
 //        layoutParams.height=size;
 
-        //不让editInput获取焦点
-        isFace.requestFocus();
         //初始化表情面板
         initEmotion();
 

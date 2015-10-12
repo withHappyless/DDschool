@@ -149,7 +149,7 @@ public class PostsAdapter extends BaseAdapter {
                 TimeUtil.stringToLong(post.getCreatedAt(), "yyyy-MM-dd HH:mm")));
         //加载性别
 
-        if (user.getUserSex() != null || user.getUserSex()) {        //false是男
+        if (user.getUserSex() != null && user.getUserSex()) {        //false是男
 
             holder.iv_avatar_sex.setImageResource(R.drawable.ic_th_sex_girl);
         }

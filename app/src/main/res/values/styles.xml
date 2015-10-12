@@ -2,7 +2,7 @@
 
     <style name="Theme.Swipe.Back" parent="AppTheme.Base">
 
-        <item name="android:windowAnimationStyle">@style/ActivitySwipeBack</item>
+        <item name="android:windowAnimationStyle">@style/ActivitySwipeBack</item>activity
         <item name="android:windowIsTranslucent">true</item>
 
     </style>

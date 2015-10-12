@@ -94,7 +94,6 @@
             android:paddingRight="3dp"
             android:clickable="true"
             android:layout_marginLeft="5dp"
-            android:focusableInTouchMode="true"
             />
         <TextView
             android:id="@+id/tv_new_post_clear"

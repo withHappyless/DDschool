@@ -69,7 +69,6 @@ public class CommentAdapter extends BaseAdapter{
             holder.tv_caption = (TextView) convertView.findViewById(R.id.tv_caption);
             holder.rl_content = (RelativeLayout) convertView.findViewById(R.id.rl_content);
             holder.tv_comment_content = (TextView) convertView.findViewById(R.id.tv_comment_content);
-            holder.tv_comment_recontent = (TextView) convertView.findViewById(R.id.tv_comment_recontent);
             //储存视图
             convertView.setTag(holder);
         }else{

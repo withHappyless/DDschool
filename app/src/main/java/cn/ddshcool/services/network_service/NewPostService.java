@@ -1,5 +1,6 @@
 package cn.ddshcool.services.network_service;
 
+import android.app.Activity;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
@@ -13,7 +14,6 @@ import java.util.ArrayList;
 
 import cn.bmob.v3.datatype.BmobFile;
 import cn.bmob.v3.listener.SaveListener;
-import cn.ddshcool.entity.BaseActivity;
 import cn.ddshcool.entity.BmobBean.Post;
 import cn.ddshcool.utils.ImageUtils;
 import cn.ddshcool.utils.MyApplication;
@@ -29,7 +29,7 @@ public class NewPostService {
     private static int isSuccess;
 
 
-    public static void whatSend(BaseActivity newPostActivity, ArrayList<Uri> imgUris, Post postlist) {
+    public static void whatSend(Activity newPostActivity, ArrayList<Uri> imgUris, Post postlist) {
 
         myImgUris = imgUris;
         myPostlist = postlist;
@@ -50,7 +50,7 @@ public class NewPostService {
     }
 
     //发送帖子
-    public static void sendPost(final BaseActivity newPostActivity, Post postlist, final SweetAlertDialog dialog) {
+    public static void sendPost(final Activity newPostActivity, Post postlist, final SweetAlertDialog dialog) {
 
 
         postlist.save(newPostActivity, new SaveListener() {
@@ -67,7 +67,7 @@ public class NewPostService {
     }
 
     //发送带图片帖子
-    public static void sendPost(final BaseActivity newPostActivity, final Post postlist, final ArrayList<Uri> images, final SweetAlertDialog dialog) {
+    public static void sendPost(final Activity newPostActivity, final Post postlist, final ArrayList<Uri> images, final SweetAlertDialog dialog) {
         final String[] imagePaths = new String[images.size()];
         isSuccess = 0;
         if (Build.VERSION.SDK_INT > 19) {
@@ -155,7 +155,7 @@ public class NewPostService {
 
     }
 
-    public static void showDalog(final BaseActivity newPostActivity, final SweetAlertDialog dialog, boolean isScuess) {
+    public static void showDalog(final Activity newPostActivity, final SweetAlertDialog dialog, boolean isScuess) {
         if (isScuess) {
 
             dialog.changeAlertType(SweetAlertDialog.SUCCESS_TYPE);

@@ -36,7 +36,6 @@ public class TimeUtil {
 	public static String getDescriptionTimeFromTimestamp(long timestamp) {
 		long currentTime = System.currentTimeMillis();
 		long timeGap = (currentTime - timestamp) / 1000;// 与现在时间相差秒数
-		System.out.println("timeGap: " + timeGap);
 		String timeStr = null;
 		if (timeGap > YEAR) {
 			timeStr = timeGap / YEAR + "年前";
